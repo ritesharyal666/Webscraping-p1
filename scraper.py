@@ -4,6 +4,7 @@ import json
 
 URL = "https://books.toscrape.com/"
 
+
 def scrape_books(url):
     response = requests.get(url)
     if response.status_code != 200:
@@ -35,3 +36,4 @@ def scrape_books(url):
         json.dump(scraped_books, f, indent=4,ensure_ascii=False)
 
 scrape_books(URL)
+
